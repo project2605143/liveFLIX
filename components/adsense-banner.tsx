@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-export default function AdsenseBanner() {
+export default function AdsenseBanner({ slot = '3821512233' }: { slot?: string }) {
   const initialized = useRef(false)
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function AdsenseBanner() {
         className="adsbygoogle block min-h-[100px] w-full"
         style={{ display: 'block' }}
         data-ad-client="ca-pub-9603074308935425"
-        data-ad-slot="3821512233"
+        data-ad-slot={slot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
